@@ -1,13 +1,10 @@
 function calcularSalarioNeto(salario, horasExtras, bonificaciones, vacationDays) {
     let tarifaHora = salario / 160;
     let pagoExtra = horasExtras * tarifaHora * 1.35;
-    let pagoVacaciones = (salario / 23.83) * vacationDays;
-
-    // 🏦 Deducciones calculadas sobre el salario mensual
+    let pagoVacaciones = (salario / 23.83) * vacationDays;    
     let afp = salario * 0.0287;
     let sfs = salario * 0.0304;
     let isr = calcularISR(salario);
-
     let totalDeducciones = afp + sfs + isr;
     let salarioNeto = salario + pagoExtra + bonificaciones + pagoVacaciones - totalDeducciones;
 

@@ -17,11 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("calculateDoubleSalary").addEventListener("click", function () {
+
         let monthsWorked = parseFloat(document.getElementById("workedMonths").value);
         let salaryBase = parseFloat(document.getElementById("doubleSalaryBase").value);
-
         let doubleSalary = calcularDobleSueldo(salaryBase, monthsWorked);
-        document.getElementById("doubleSalaryResult").innerText = `RD$ ${doubleSalary.toFixed(2)}`;
+
+    document.getElementById("doubleSalaryResult").innerText = `RD$ ${doubleSalary.toFixed(2)}`;
     });
 
     document.getElementById("themeToggle").addEventListener("click", toggleTheme);
